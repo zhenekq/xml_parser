@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="mobile-company">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="name" type="xsd:string"/>
+                <xsd:element name="foundation" type="xsd:date"/>
+                <xsd:element name="tariffs" type="tariffs"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="tariffs">
+        <xsd:sequence>
+            <xsd:element name="tariff" type="tariff"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!--TARIFF DESCRIPTION-->
+    <xsd:complexType name="tariff">
+        <xsd:sequence>
+            <xsd:element name="tariff_name" type="xsd:string" />
+            <xsd:element name="payroll">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:decimal">
+                        <xsd:minInclusive value="0.0"/>
+                        <xsd:maxInclusive value="5.20"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="calls" type="calls"/>
+            <xsd:element name="sms_price">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:decimal">
+                        <xsd:minInclusive value="0.0"/>
+                        <xsd:maxInclusive value="1.0"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="parameters" type="parameters"/>
+        </xsd:sequence>
+        <xsd:attribute name="tariff_id" type="xsd:ID" use="required"/>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="calls">
+        <xsd:sequence>
+            <xsd:element name="call" type="call"/>
+        </xsd:sequence>
+
+    </xsd:complexType>
+
+    <!--CALL DESCRIPTION-->
+    <xsd:complexType name="call">
+        <xsd:sequence>
+            <xsd:element name="call_name" type="xsd:string"/>
+            <xsd:element name="call_price">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:decimal">
+                        <xsd:minInclusive value="0.0"/>
+                        <xsd:maxInclusive value="2.1"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="call_id" type="xsd:ID" use="required"/>
+    </xsd:complexType>
+
+    <!--PARAMETER DESCRIPTION-->
+    <xsd:complexType name="parameters">
+        <xsd:sequence>
+            <xsd:element name="parameter" type="parameter"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="parameter">
+        <xsd:sequence>
+            <xsd:element name="parameter_name" type="xsd:string"/>
+            <xsd:element name="parameter_amount" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="parameter_id" type="xsd:ID" use="required"/>
+    </xsd:complexType>
+
+</xsd:schema>

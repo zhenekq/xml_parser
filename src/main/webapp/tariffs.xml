@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mobile-company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="tariffs.xsd"
+                xmlns="file://D:/folderWithAllDevelopmentOnThisPC/Servlets/XML_VALIDATOR/src/main/webapp/tariffs.xsd">
+    <name>MTC-COMPANY</name>
+    <foundation>12.03.2010</foundation>
+    <tariffs>
+        <tariff tariff_id="tariff_1">
+            <tariff_name>MTC-BONUS</tariff_name>
+            <payroll>1.3</payroll>
+            <calls>
+                <call call_id="call_1">
+                    <call_name>Out of network</call_name>
+                    <call_price>1.2</call_price>
+                </call>
+                <call call_id="call_2">
+                    <call_name>In network</call_name>
+                    <call_price>0.6</call_price>
+                </call>
+                <call call_id="call_3">
+                    <call_name>Stationary</call_name>
+                    <call_price>0.9</call_price>
+                </call>
+            </calls>
+            <sms_price>0.5</sms_price>
+            <parameters>
+                <parameter parameter_id="parameter_1">
+                    <parameter_name>favorite_number</parameter_name>
+                    <parameter_amount>5</parameter_amount>
+                </parameter>
+                <parameter parameter_id="parameter_2">
+                    <parameter_name>tariff-ing</parameter_name>
+                    <parameter_amount>12-sec</parameter_amount>
+                </parameter>
+                <parameter parameter_id="parameter_3">
+                    <parameter_name>connect_price</parameter_name>
+                    <parameter_amount>12.3</parameter_amount>
+                </parameter>
+            </parameters>
+        </tariff>
+    </tariffs>
+</mobile-company>
