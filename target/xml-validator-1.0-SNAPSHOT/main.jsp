@@ -47,12 +47,14 @@
         }
 
         .submit_button {
+            display: flex;
             margin: 0 auto;
-            width: 100px;
+            width: 210px;
         }
 
         .btn {
-            margin-top: 20px;
+            margin-top: 30px;
+            width: 120px;
         }
 
         h2 {
@@ -60,12 +62,38 @@
             width: auto;
         }
 
-        .invisible_text{
+        .invisible_text {
             color: red;
             position: absolute;
             bottom: 400px;
         }
 
+        .parsed_info {
+            position: absolute;
+            bottom: 523px;
+            right: 200px;
+            color: darkgreen;
+        }
+
+        #parse {
+            margin-right: 20px;
+        }
+
+        #currentXML {
+            margin-top: 5px;
+            margin-bottom: 20px;
+            background-color: #DEB887;
+        }
+
+        .information {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(2, 1fr)
+        }
+
+        #resultXML {
+            background-color: #BC8F8F;
+        }
 
     </style>
 </head>
@@ -76,18 +104,30 @@
         <div class="page_title">
             <h1>Xml-validator</h1>
         </div>
-        <form action="${pageContext.request.contextPath}/main" method="post">
+        <form action="${pageContext.request.contextPath}/main" method="post" enctype="multipart/form-data">
             <div class="file_form">
                 <div class="file_input">
                     <label for="formFile" class="form-label">Please, choose your xml file!</label>
-                    <input class="form-control" type="file" id="formFile" name="file">
+                    <input class="form-control" type="file" accept=".xml" id="formFile" name="file">
+                    <input type="hidden" value="/tmp" name="destination"/>
                 </div>
                 <c:if test="${isVisible == false}" var="isVisible">
                     <div class="invisible_text">
                         <p>Choose the file please!</p>
                     </div>
-                    <c:set var="isVisible" value="true"/>
                 </c:if>
+                <c:if test="${isVisible == false}">
+                    <div class="parsed_info">
+                        <p>Name of parsed file:
+                            <strong><c:out value=" ${parsed_file}"/></strong>
+                        </p>
+
+                        <p>Parsing tool:
+                            <strong><c:out value="${parsing_tool}"/></strong>
+                        </p>
+                    </div>
+                </c:if>
+
                 <div class="select_form">
                     <label for="formFile" class="form-label">Please, choose your parser!</label>
                     <select class="form-select" name="selected_items" aria-label="Default select example">
@@ -98,72 +138,42 @@
                 </div>
             </div>
             <div class="submit_button">
-                <button type="submit" name="submit" class="btn btn-primary">Parse it</button>
+                <button type="submit" name="parse" class="btn btn-primary" id="parse">Parse it</button>
+                <button type="submit" name="check" class="btn btn-primary" id="checkIsValid">Is valid?</button>
             </div>
         </form>
-        <h2>Xml information: </h2>
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Tariff</th>
-                <th scope="col" class="table-danger">MTC-BONUS</th>
-                <th scope="col">MTC-BONUS+</th>
-                <th scope="col">MTC-NETWORK</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="col">Tariff price</th>
-                <td class="table-danger">Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="col">Calls in network</th>
-                <td colspan="2" class="table-danger">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-            <tr>
-                <th scope="col">Calls out of network</th>
-                <td colspan="2" class="table-danger">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-            <tr>
-                <th scope="col">Stationary calls</th>
-                <td colspan="2" class="table-danger">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-            <tr>
-                <th scope="col">Amount of favorite numbers</th>
-                <td colspan="2" class="table-danger">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-            <tr>
-                <th scope="col">SMS price</th>
-                <td colspan="2" class="table-danger">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-            <tr>
-                <th scope="col">Tariffication</th>
-                <td colspan="2" class="table-danger">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-            <tr>
-                <th scope="col">Connection price</th>
-                <td colspan="2" class="table-danger">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-            </tbody>
-        </table>
+        <div class="information">
+            <div class="file_data">
+                <i><h2>Current file:</h2></i>
+                <c:set var="amount" scope="session" value="42"/>
+                <c:if test="${isVisible == false}" var="isVisible">
+                    <div class="form-group">
+                        <textarea class="form-control" disabled id="currentXML" rows="${amount}">
+                            <c:out value="${parsed_info}"/>
+                        </textarea>
+                    </div>
+                </c:if>
+            </div>
+            <div class="parsing_data">
+                <strong><i><h2>Parsing info:</h2></i></strong>
+                <c:if test="${isVisible != false}" var="isVisible">
+                    <div class="form-group">
+                        <textarea class="form-control" disabled id="resultXML" rows="${amount}">
+                            <c:out value="${parsed_info}"/>
+                        </textarea>
+                    </div>
+                </c:if>
+            </div>
+        </div>
     </div>
 </div>
-<footer class="text-muted">
+<footer class="text-muted border-top border-2">
     <div class="container">
         <p class="float-end mb-1">
         <p class="float-end mb-1">© 2021 zhenekq</p>
-        </p>
         <p class="mb-1">Xml-validator</p>
-        <p class="mb-0">Check my github-account <a href="https://github.com/zhenekq">Github account</a></p>
+        <p class="mb-0">Check my github-account <a href="https://github.com/zhenekq" target="_blank">Github account</a>
+        </p>
     </div>
 </footer>
 </body>

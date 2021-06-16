@@ -6,7 +6,44 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be2036fa-73ec-40d6-9d55-ecf889196cfc" name="Default Changelist" comment="" />
+    <list default="true" id="be2036fa-73ec-40d6-9d55-ecf889196cfc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/service/command/action/DOMValidationCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/service/command/action/parser/DOMParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/service/dao/FactoryDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/service/dao/file/FileDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/service/dao/file/FileDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/service/command/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/command/CommandName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/service/command/CommandName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/command/CommandProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/service/command/CommandProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/command/action/DOMValidationCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/command/action/SAXValidatorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/service/command/action/SAXValidatorCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/command/action/StAXValidatorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/service/command/action/StAXValidatorCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/xml/validator/util/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/xml/validator/command/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/xml/validator/command/CommandName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/xml/validator/command/CommandProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/xml/validator/command/action/DOMValidationCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/xml/validator/command/action/SAXValidatorCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/xml/validator/command/action/StAXValidatorCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/xml/validator/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/xml/validator/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/xml/validator/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/xml/validator/util/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/xml/validator/command/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/xml/validator/command/CommandName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/xml/validator/command/CommandProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/xml/validator/command/action/DOMValidationCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/xml/validator/command/action/SAXValidatorCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/xml/validator/command/action/StAXValidatorCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/xml/validator/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/xml/validator/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/xml/validator/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/xml/validator/util/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT/tariffs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/xml-validator-1.0-SNAPSHOT/tariffs.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +58,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -37,9 +77,12 @@
     </option>
   </component>
   <component name="ProjectId" id="1twTj6SeW4odnb60NPVegOEVljX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last.edited.regexp" value="\" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -145,11 +188,25 @@
       <option name="presentableId" value="Default" />
       <updated>1623679283504</updated>
       <workItem from="1623679286185" duration="153000" />
-      <workItem from="1623679553903" duration="15123000" />
+      <workItem from="1623679553903" duration="42017000" />
+      <workItem from="1623865654607" duration="1114000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

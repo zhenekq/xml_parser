@@ -1,15 +1,17 @@
 package by.epamtc.xml.validator.controller;
 
-import by.epamtc.xml.validator.command.Command;
-import by.epamtc.xml.validator.command.CommandProvider;
+import by.epamtc.xml.validator.service.command.Command;
+import by.epamtc.xml.validator.service.command.CommandProvider;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@MultipartConfig
 public class MainController extends HttpServlet {
 
     private static final CommandProvider provider = CommandProvider.getInstance();
@@ -27,6 +29,6 @@ public class MainController extends HttpServlet {
         commandName = request.getParameter("selected_items");
         command = provider.getCommand(commandName);
         command.execute(request, response);
-        doGet(request, response);
+        doGet(request,response);
     }
 }
