@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<mobile-company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="tariffs.xsd"
+<mobile-company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="D:\folderWithAllDevelopmentOnThisPC\Servlets\XML_VALIDATOR\src\main\webapp\tariffs.xsd"
                 xmlns="file://D:/folderWithAllDevelopmentOnThisPC/Servlets/XML_VALIDATOR/src/main/webapp/tariffs.xsd">
     <name>MTC-COMPANY</name>
     <foundation>12.03.2010</foundation>

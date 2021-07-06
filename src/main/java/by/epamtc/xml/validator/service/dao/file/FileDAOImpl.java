@@ -27,14 +27,15 @@ public class FileDAOImpl implements FileDAO {
         try {
             fileContent = filePart.getInputStream();
             //print(fileContent);
-            String value = print(fileContent);
-            request.setAttribute("parsed_info",value);
+            String xmlFileContent = print(fileContent);
+            String xmlFileParsedContent;
+            request.setAttribute("xml_data",xmlFileContent);
+            request.setAttribute("parsed_xml", "Lol");
         } catch (FileNotFoundException e) {
             System.out.println("File not found!");
         }
         return fileContent;
     }
-
 
     @Override
     public String getFileName(final Part part) {
@@ -48,6 +49,8 @@ public class FileDAOImpl implements FileDAO {
         }
         return null;
     }
+
+
 
     private static String print(InputStream stream) throws IOException {
         int i;

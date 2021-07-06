@@ -65,12 +65,12 @@
         .invisible_text {
             color: red;
             position: absolute;
-            bottom: 400px;
+            bottom: 360px;
         }
 
         .parsed_info {
             position: absolute;
-            bottom: 523px;
+            bottom: 466px;
             right: 200px;
             color: darkgreen;
         }
@@ -149,7 +149,7 @@
                 <c:if test="${isVisible == false}" var="isVisible">
                     <div class="form-group">
                         <textarea class="form-control" disabled id="currentXML" rows="${amount}">
-                            <c:out value="${parsed_info}"/>
+                            <c:out value="${xml_data}"/>
                         </textarea>
                     </div>
                 </c:if>
@@ -159,7 +159,7 @@
                 <c:if test="${isVisible != false}" var="isVisible">
                     <div class="form-group">
                         <textarea class="form-control" disabled id="resultXML" rows="${amount}">
-                            <c:out value="${parsed_info}"/>
+                            <c:out value="${parsed_xml}"/>
                         </textarea>
                     </div>
                 </c:if>
